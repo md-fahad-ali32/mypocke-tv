@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      { "source": "**", "destination": "/index.html" }
+    ],
+    "headers": [
+     {
+       "source": "**/*.@(js.map|js|css|txt|html|png|m3u8)",
+       "headers":[{
+         "key": "Access-Control-Allow-Origin",
+         "value": "*"
+       }]
+     },{
+       "source":"**",
+       "headers":[{
+         "key": "Cache-Control",
+         "value": "no-cache"
+       }]
+     },{
+      "source":"**", 
+      "headers": [
+     {"key": "X-Content-Type-Options", "value": "nosniff"},
+     {"key": "X-Frame-Options", "value": "ALLOW-FROM https://get.google.com"},
+     {"key": "X-UA-Compatible", "value": "ie=edge"},
+     {"key": "X-XSS-Protection", "value": "1; mode=block"}
+   ]
+     } 
+     ]
+  }
+}

@@ -1,0 +1,23 @@
+.a ,.fa-instagram,.fa-linkedin,.fa-facebook{
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  margin-left: -10px;
+  margin-right:10px;
+  position: relative;
+  left: -10px;
+  padding-left:50px ;
+}
+.fa-instagram:hover{
+  color:red;
+  text-decoration: none;
+}
+.fa-linkedin:hover{
+  color:light-blue;
+  text-decoration: none;
+}
+.fa-facebook:hover{
+  color:blue;
+ text-decoration: none;
+ 
+}
